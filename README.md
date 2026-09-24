@@ -65,12 +65,12 @@ Pest library information was adapted from the [University of California Statewid
 
 The pest detection model was trained using datasets sourced from [Roboflow Universe](https://universe.roboflow.com/).
 
--(https://universe.roboflow.com/pest-classifier/pest-aphid)
--(https://universe.roboflow.com/jade-9fvdy/aphids-fgtid)
--(https://universe.roboflow.com/uet-taxila-x6wdk/pest-detection-green-leafhopper)
--(https://universe.roboflow.com/hydroponics-cuihh/pest-types)
--(https://universe.roboflow.com/fixed0301/thrips-detection-for-smart-trap)
--(https://universe.roboflow.com/thesis-8yqnt/thrips-gz4bl)
+*   (https://universe.roboflow.com/pest-classifier/pest-aphid)
+*   (https://universe.roboflow.com/jade-9fvdy/aphids-fgtid)
+*   (https://universe.roboflow.com/uet-taxila-x6wdk/pest-detection-green-leafhopper)
+*   (https://universe.roboflow.com/hydroponics-cuihh/pest-types)
+*   (https://universe.roboflow.com/fixed0301/thrips-detection-for-smart-trap)
+*   (https://universe.roboflow.com/thesis-8yqnt/thrips-gz4bl)
 
 ## Requirements
 
