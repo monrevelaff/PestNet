@@ -1,0 +1,10 @@
+Aphids
+Beetle
+Caterpillar
+Leafhopper
+Mealybugs
+Slug
+Sowbug
+Spidermites
+Thrips
+Weevil
