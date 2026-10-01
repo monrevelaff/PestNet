@@ -52,6 +52,7 @@ PestNet Mobile follows the **MVVM** pattern. Jetpack Compose screens never commu
 | **View** | `ui/` | Compose screens for home, camera, results, library, history, login, and sign-up. They collect `StateFlow` and forward user actions. |
 | **ViewModel** | `viewmodels/` | `@HiltViewModel` classes that hold screen state and run work in `viewModelScope`. |
 | **Model** | `data/` | Room entities and DAOs, repositories, the TensorFlow Lite detector, and the preloaded pest records. |
+
 ViewModels in the project:
 * `PestDetectionViewModel` exposes scan progress, the current result, and recent or starred history.
 * `CameraViewModel` starts the camera and captures a photo for detection.
