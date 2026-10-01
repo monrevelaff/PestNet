@@ -44,6 +44,21 @@ Example:
 
 The complete detection workflow operates locally, allowing the application to function without an internet connection.
 
+## Architecture
+PestNet Mobile follows the **MVVM** pattern. Jetpack Compose screens never communicate with Room or TensorFlow Lite directly. Instead, Hilt injects each `ViewModel`, which serves as the sole layer the screen interacts with.
+
+| Layer | Where it lives | Responsibility |
+| --- | --- | --- |
+| **View** | `ui/` | Compose screens for home, camera, results, library, history, login, and sign-up. They collect `StateFlow` and forward user actions. |
+| **ViewModel** | `viewmodels/` | `@HiltViewModel` classes that hold screen state and run work in `viewModelScope`. |
+| **Model** | `data/` | Room entities and DAOs, repositories, the TensorFlow Lite detector, and the preloaded pest records. |
+ViewModels in the project:
+* `PestDetectionViewModel` exposes scan progress, the current result, and recent or starred history.
+* `CameraViewModel` starts the camera and captures a photo for detection.
+* `PestLibraryViewModel` and `PestInfoViewModel` load the pest list and a single pest record.
+* `LoginViewModel`, `SignUpViewModel`, `UserSessionViewModel`, and `UserProfileViewModel` handle local accounts, the signed-in session, and theme preference.
+Repositories behind those ViewModels are `DetectionRepository`, `PestScanRepository`, `PestInfoRepository`, and `UserRepository`. They are the model boundary: detection, saved scans, the pest library, and user accounts.
+
 ## Pest Classes
 
 The bundled model detects and classifies the following pest classes:
@@ -126,6 +141,7 @@ The Gradle project name is `PestManagementApp` and the Android module is `:app`.
 
 | Component             | Technology                  |
 | --------------------- | --------------------------- |
+| Architecture          | MVVM                        |
 | UI                    | Jetpack Compose, Material 3 |
 | Navigation            | Navigation Compose          |
 | Dependency Injection  | Hilt                        |
